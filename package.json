@@ -1,0 +1,12 @@
+{
+  "name": "mbti-test",
+  "version": "1.0.0",
+  "description": "리액트 9기 MBTI-TEST 개인 과제 레포",
+  "main": "index.js",
+  "scripts": {
+        "start": "node server.js"
+      },
+      "devDependencies": {
+        "json-server": "^0.17.4"
+      }
+}
