@@ -1,27 +1,22 @@
-import axios from "axios";
+// src/api/testResult.js
+import instance from "./axiosInstance";
 
-const API_URL = "http://localhost:5000/testResults";
-
-// 1-1. 모든 테스트 결과 가져오기
 export const getTestResults = async () => {
-  const response = await axios.get(API_URL);
+  const response = await instance.get("/testResults");
   return response.data;
 };
 
-// 1-2. 새로운 테스트 결과 추가
 export const createTestResult = async (resultData) => {
-  const response = await axios.post(API_URL, resultData);
+  const response = await instance.post("/testResults", resultData);
   return response.data;
 };
 
-// 1-3. 특정 테스트 결과의 공개 여부 변경
 export const updateTestResultVisibility = async (id, visibility) => {
-  const response = await axios.patch(`${API_URL}/${id}`, { visibility });
+  const response = await instance.patch(`/testResults/${id}`, { visibility });
   return response.data;
 };
 
-// 1-4. 특정 테스트 결과 삭제
 export const deleteTestResult = async (id) => {
-  const response = await axios.delete(`${API_URL}/${id}`);
+  const response = await instance.delete(`/testResults/${id}`);
   return response.data;
 };

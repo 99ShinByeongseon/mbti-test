@@ -18,7 +18,6 @@ const TestResultList = ({ user }) => {
     fetchResults();
   }, []);
 
-  // 공개된 결과 또는 본인 작성 결과만 필터링
   const filteredResults = results.filter(
     (result) => result.visibility || (user && result.userId === user.userId)
   );

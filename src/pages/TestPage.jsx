@@ -12,7 +12,6 @@ const TestPage = ({ user }) => {
     const mbtiResult = calculateMBTI(answers);
 
     const resultData = {
-      // user 정보가 있다면 해당 값 사용, 없으면 guest 처리
       id: user?.userId || "guest",
       nickname: user?.nickname || "Guest",
       result: mbtiResult,

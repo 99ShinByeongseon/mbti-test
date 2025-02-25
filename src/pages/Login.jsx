@@ -8,11 +8,8 @@ const Login = ({ setUser }) => {
 
   const handleLogin = async (formData) => {
     try {
-      // 로그인 API 호출
       const response = await login(formData);
-      // 로그인 성공 시 사용자 정보 저장 (예시)
-      setUser(response.data);
-      // 프로필 페이지로 이동
+      setUser({ userId: response.userId, nickname: response.nickname });
       navigate("/profile");
     } catch (error) {
       alert("로그인에 실패했습니다. 다시 시도해주세요.");
