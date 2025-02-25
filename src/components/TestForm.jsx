@@ -3,7 +3,7 @@ import { questions } from "../data/questions";
 
 const TestForm = ({ onSubmit }) => {
   const [answers, setAnswers] = useState(
-    Array(questions.length).fill({ type: "", answer: "" }),
+    Array(questions.length).fill({ type: "", answer: "" })
   );
 
   const handleChange = (index, answer) => {
