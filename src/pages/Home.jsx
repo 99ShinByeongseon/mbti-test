@@ -13,15 +13,15 @@ const Home = () => {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
         <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-semibold mb-2">성격 유형 검사</h2>
-          <p className="text-gray-600">다양한 성격 유형을 테스트하고, 결과를 확인해 보세요.</p>
+          <p className="text-gray-600">자신의 성격 유형을 파악하고 삶의 여러 영역에서 어떤 영향을 미치는지 알아보세요.</p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-semibold mb-2">성격 유형 이해</h2>
-          <p className="text-gray-600">자신의 성격을 깊이 있게 분석해 보고, 이해의 폭을 넓히세요.</p>
+          <p className="text-gray-600">다른 사람들이 어떻게 행동하는지 이해하는데 도움을 줄 수 있습니다.</p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-semibold mb-2">팀 평가</h2>
-          <p className="text-gray-600">팀원들의 성격 유형을 파악하고, 팀워크를 향상시켜 보세요.</p>
+          <p className="text-gray-600">팀 내에서 자신과 동료들의 성격을 이해하고 협력할 수 있는 방법을 배워보세요.</p>
         </div>
       </section>
       <div className="mt-8">
