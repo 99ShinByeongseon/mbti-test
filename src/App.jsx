@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import TestPage from "./pages/TestPage";
-import Results from "./pages/Results";
+import Results from "./pages/TestResultPage";
 
 function App() {
   const [user, setUser] = useState(null);

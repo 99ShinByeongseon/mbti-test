@@ -1,4 +1,3 @@
-// src/api/testResult.js
 import instance from "./axiosInstance";
 
 export const getTestResults = async () => {

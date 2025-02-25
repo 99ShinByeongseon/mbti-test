@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getTestResults } from "../api/testResult";
+import { getTestResults } from "../api/testResults"; // testResults.js 파일에서 내보내는 함수 임포트
 import TestResultItem from "./TestResultItem";
 
 const TestResultList = ({ user }) => {

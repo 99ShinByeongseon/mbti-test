@@ -1,5 +1,7 @@
 import React from "react";
 import TestResultList from "../components/TestResultList";
+import { getTestResults } from "../api/testResults";
+
 
 const Results = ({ user }) => {
   return (

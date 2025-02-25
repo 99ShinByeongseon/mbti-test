@@ -1,5 +1,6 @@
+// src/components/TestResultItem.jsx
 import React from "react";
-import { updateTestResultVisibility, deleteTestResult } from "../api/testResult";
+import { updateTestResultVisibility, deleteTestResult } from "../api/testResults"; // 경로 수정
 
 const TestResultItem = ({ result, user, onRefresh }) => {
   const isOwner = user && result.userId === user.userId;
