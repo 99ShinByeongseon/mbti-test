@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TestForm from "../components/TestForm";
 import { calculateMBTI, mbtiDescriptions } from "../utils/mbtiCalculator";
-import { createTestResult } from "../api/testResults";
+import { createTestResult } from "../api/testResult";
 import { useNavigate } from "react-router-dom";
 
 const TestPage = ({ user }) => {
@@ -10,7 +10,24 @@ const TestPage = ({ user }) => {
 
   const handleTestSubmit = async (answers) => {
     const mbtiResult = calculateMBTI(answers);
-		/* Test 결과는 mbtiResult 라는 변수에 저장이 됩니다. 이 데이터를 어떻게 API 를 이용해 처리 할 지 고민해주세요. */
+
+    const resultData = {
+      // user 정보가 있다면 해당 값 사용, 없으면 guest 처리
+      id: user?.userId || "guest",
+      nickname: user?.nickname || "Guest",
+      result: mbtiResult,
+      visibility: true,
+      date: new Date().toISOString().slice(0, 10),
+      userId: user?.userId || "guest",
+    };
+
+    try {
+      await createTestResult(resultData);
+      setResult(mbtiResult);
+    } catch (error) {
+      console.error("테스트 결과 저장 실패: ", error);
+      alert("테스트 결과 저장에 실패했습니다. 다시 시도해주세요.");
+    }
   };
 
   const handleNavigateToResults = () => {

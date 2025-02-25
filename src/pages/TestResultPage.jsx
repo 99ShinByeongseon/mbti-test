@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import TestResultList from "../components/TestResultList";
 
-const TestResult = () => {
+const Results = ({ user }) => {
   return (
-    <div>
-      <h1>테스트 결과 페이지</h1>
+    <div className="min-h-screen bg-gray-100 p-6">
+      <h1 className="text-3xl font-bold text-center mb-6">테스트 결과 목록</h1>
+      <TestResultList user={user} />
     </div>
   );
 };
 
-export default TestResult;
+export default Results;
